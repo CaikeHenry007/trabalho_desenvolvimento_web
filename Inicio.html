@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tela de Início</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #78c2f5, #a855f7);
+      overflow-x: hidden;
+    }
+
+    .card {
+      max-width: 800px;
+      margin: 100px auto;
+      background: linear-gradient(to right, #6633cc, #7e57c2);
+      color: white;
+      padding: 40px;
+      border-radius: 20px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .text-content {
+      max-width: 300px;
+    }
+
+    .text-content h1 {
+      font-size: 40px;
+      margin: 0 0 10px;
+    }
+
+    .text-content p {
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .text-content button {
+      padding: 10px 20px;
+      background-color: white;
+      color: #5e35b1;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .image-content img {
+      max-height: 300px;
+    }
+
+    .spongebob {
+      position: absolute;
+      bottom: 20px;
+      left: 300px;
+      height: 80px;
+    }
+
+    .logo {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      height: 50px;
+    }
+
+    /* Elementos flutuantes decorativos podem ser adicionados aqui com position:absolute */
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img src="logo.png" class="logo" alt="Logo" />
+
+    <div class="text-content">
+      <h1>Lorem ipsum</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        Etiam eget ligula eu lectus lobortis condimentum. 
+        Aliquam nonummy auctor massa. 
+        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
+        Nulla at risus. Quisque purus magna, auctor et, sagittis ac,
+         posuere eu, lectus. Nam mattis, felis ut adipiscing.</p>
+      <button>Ver mais</button>
+    </div>
+
+    <div class="image-content">
+      <img src="hamburguer.png" alt="Hamburguer" />
+    </div>
+
+    <img src="spongebob.png" class="spongebob" alt="Bob Esponja" />
+  </div>
+</body>
+</html>
