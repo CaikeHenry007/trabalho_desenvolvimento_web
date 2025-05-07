@@ -1,0 +1,251 @@
+body {
+  position: relative;
+  min-height: 100%;
+  background: linear-gradient(to bottom, #cce7ff, #fcdada);
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  border-radius: 20px;
+  margin: 1rem auto;
+  width: 90%;
+  max-width: 900px;
+}
+
+.card .text {
+  max-width: 50%;
+}
+
+.card .text h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  font-family: "Coiny", system-ui;
+  font-style: normal;
+}
+
+.card .text p {
+  font-size: 20px;
+  margin-top: 0.5rem;
+  font-family: "Coiny", system-ui;
+}
+
+.card .image {
+  width: 250px;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px; /* Adicionando um pequeno arredondamento nas imagens */
+}
+
+/* Background colors */
+.lilac {
+  background-color: #dda6f2;
+}
+.blue {
+  background-color: #1ca7ec;
+  color: white;
+}
+.green {
+  background-color: #b5f4b6;
+}
+.peach {
+  background-color: #fcd7c2;
+}
+
+.burger1 {
+  background-image: url('images/hamburguerbob.png');
+}
+.burger2 {
+  background-image: url('images/hamburguerpatrick.png');
+}
+.burger3 {
+  background-image: url('images/burguerlula.png');
+}
+.burger4 {
+  background-image: url('images/burguerSandy.png');
+}
+
+/* Estilos para o botão de voltar */
+.back-button-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.back-button {
+  padding: 12px 25px;
+  background-color: #f8f9fa; /* Um tom de cinza claro */
+  color: #333; /* Texto mais escuro */
+  border: 1px solid #ddd; /* Borda sutil */
+  border-radius: 25px; /* Formato arredondado */
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Transição suave para o hover */
+}
+
+.back-button:hover {
+  background-color: #e9ecef; /* Um tom ligeiramente mais escuro no hover */
+}
+
+.personagens {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.personagem {
+  position: absolute;
+  max-width: 180px;
+  z-index: 1;
+  height: auto;
+}
+
+#patrick {
+  top: 25%;
+  right: 15%;
+  width: 180px;
+}
+
+#bob {
+  top: 14.4%;
+  right: 39%;
+  width: 180px;
+}
+
+#garry {
+  top: 20.8%;
+  left: 59%;
+  width: 140px;
+}
+
+#lula {
+  top: 62%;
+  left: 50%;
+  width: 180px;
+}
+
+#sandy {
+  bottom: 0;
+  left: 13%;
+  width: 180px;
+}
+
+#plankton {
+  top: 18%;
+  left: 9%;
+}
+
+#sirigueijo {
+  bottom: 0;
+  right: 20%;
+  width: 180px;
+}
+
+#lula1 {
+  width: 100px;
+  top: 25%;
+  left: 35%;
+}
+
+.decoracoes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.canto {
+  position: absolute;
+  width: 300px;
+  z-index: 1;
+}
+
+#planta-topo-esquerda {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#planta-topo-direita {
+  top: 0;
+  right: 0;
+}
+
+#planta-base-esquerda {
+  left: 0;
+  bottom: 0;
+}
+
+#planta-base-direita {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+#planta-meio-esquerda {
+  left: 0;
+  top: 34%;
+}
+
+#planta-meio-direita {
+  right: 0;
+  top: 45%;
+}
+
+.lulas {
+  position: absolute;
+  max-width: 180px;
+  height: auto;
+  z-index: -1;
+  pointer-events: none;
+}
+
+#lula2 {
+  top: 66%;
+  left: 3%;
+}
+
+#lula3 {
+  top: 33%;
+  right: 3%;
+}
+
+#lula4 {
+  top: 70%;
+  right: 10%;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInAnimation 2s forwards ease;
+}
+
+.fade-out {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 2s ease, transform 6s ease;
+}
+
+@keyframes fadeInAnimation {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

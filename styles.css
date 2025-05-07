@@ -1,0 +1,10 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif; /* Garante que a fonte seja aplicada se carregada */
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none; /* Remove o sublinhado padrão dos links */
+  color: inherit; /* Herda a cor do texto do elemento pai */
+}

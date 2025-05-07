@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="https://fonts.googleapis.com/css2?family=Coiny&display=swap" rel="stylesheet">
+    <title>Bob Esponja - Cardápio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="cardapio_styles.css" />
+</head>
+<body class="fade-in">
+   
+    <div class="personagens">
+        <img src="images/Bob Esponja.png" class="personagem" id="bob">
+        <img src="images/Patrick.png" class="personagem" id="patrick">
+        <img src="images/Lula Molusco.png" class="personagem" id="lula">
+        <img src="images/Sandy.png" class="personagem" id="sandy">
+        <img src="images/Garry.png" class="personagem" id="garry">
+        <img src="images/Plankton.png" class="personagem" id="plankton">
+        <img src="images/Sirigueijo.png" class="personagem" id="sirigueijo">
+        <img src="images/lula.png" class="personagem" id="lula1">
+      </div>
+        
+    <div class="container">
+        <section class="card lilac">
+            <div class="text">
+                <h1> Hambúrguer de Siri </h1>
+                <p>Direto da chapa do Siri Cascudo: pão fofinho com gergelim, hambúrguer suculento preparado com a lendária receita secreta (não pergunte, é segredo!), alface fresca, tomate, picles crocante, queijo derretido e o molho especial do Bob. Simplesmente o favorito da Fenda do Biquíni..</p>
+            </div>
+            <div class="image burger1"></div>
+        </section>
+
+        <section class="card blue">
+            <div class="image burger2"></div>
+            <div class="text">
+                <h1>Patrick Bacon Bombado</h1>
+                <p>Sanduíche exagerado como o próprio Patrick: pão macio recheado com uma montanha de bacon crocante, hambúrguer alto, molho barbecue doce e cebola caramelizada. Bagunça garantida.</p>
+            </div>
+        </section>
+
+        <section class="card green">
+            <div class="text">
+                <h1>Lula Molho Apimentado</h1>
+                <p>Lanche sofisticado com atitude: hambúrguer vegetariano de berinjela grelhada, queijo provolone, rúcula fresca e um molho picante com toque de pimenta-do-mar. Refinado, porém irritadiço.</p>
+            </div>
+            <div class="image burger3"></div>
+        </section>
+
+        <section class="card peach">
+            <div class="image burger4"></div>
+            <div class="text">
+                <h1>Sandy Tex-Mex Power</h1>
+                <p>Hambúrguer texano com energia de sobra: carne temperada no estilo barbecue, queijo cheddar, doritos triturados, alface crocante e molho de pimenta com mel. Texano até debaixo d’água!</p>
+            </div>
+        </section>
+    </div>
+    <div class="back-button-container">
+        <a href="index.html" class="back-button" id="voltarBtn" >Voltar para a Tela Inicial</a>
+    </div>
+
+    <div class="decoracoes">
+        <img src="images/Plantas sup esq.png" class="canto" id="planta-topo-esquerda">
+        <img src="images/Plantas sup dir.png" class="canto" id="planta-topo-direita">
+        <img src="images/Plantas inf esq.png" class="canto" id="planta-base-esquerda">
+        <img src="images/Plantas inf dir.png" class="canto" id="planta-base-direita">
+        <img src="images/Plantas meio esq.png" class="canto" id="planta-meio-esquerda">
+        <img src="images/Plantas meio dir.png" class="canto" id="planta-meio-direita">
+        <img src="images/lula.png" class="lulas" id="lula2">
+        <img src="images/lula.png" class="lulas" id="lula3">
+        <img src="images/lula.png" class="lulas" id="lula4">
+    </div>
+  
+    <script>
+        const verMaisBtn = document.getElementById("voltarBtn");
+        voltarBtn.addEventListener("click", function (e) {
+          e.preventDefault(); // impedir o redirecionamento imediato
+          document.body.classList.add("fade-out");
+  
+          setTimeout(() => {
+            window.location.href = voltarBtn.getAttribute("href");
+          }, 600); // espera a animação terminar
+        });
+      </script>
+  </body>
+  </html>
+  
+</body>
+</html>

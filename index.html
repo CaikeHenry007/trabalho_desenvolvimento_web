@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Coiny&display=swap"
+      rel="stylesheet"
+    />
+    <title>Tela de Início</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="index_styles.css" />
+  </head>
+  <body class="fade-in">
+    <img class="alface" src="images/alface.png" />
+    <img class="tomate" src="images/tomate.png" alt="" />
+    <img class="lanche" src="images/background1.png" />
+    <img class="lanche2" src="images/background1.png" />
+    <img class="cebola" src="images/cebola.png" />
+    <img class="alface2" src="images/alfacebg.png" />
+    <img class="lanche3" src="images/hamburguerbg.png" />
+    <div class="card">
+      <img src="images/logo.png" class="logo" alt="Logo" />
+
+      <div class="text-content">
+        <h1>Frescos do mar</h1>
+        <h2>Um cardápio tão bom que até o Plankton quer copiar!</h2>
+        <p>
+          No Frescos do Mar, cada lanche é inspirado nos personagens mais
+          queridos do fundo do mar. Combos criativos, ingredientes frescos e
+          muito bom humor em um ambiente temático único. Aqui, o sabor é
+          profundo e a diversão é garantida!
+        </p>
+        <a href="cardapio.html" id="verMaisBtn"><button>Ver Mais</button></a>
+      </div>
+
+      <div class="image-content">
+        <img src="images/hamburguerbob.png" class="" alt="Hamburguer" />
+      </div>
+
+      <img src="images/spongebob.png" class="spongebob" alt="Bob Esponja" />
+    </div>
+    <img class="alface" src="images/alface.png" />
+    <img class="tomate" src="images/tomate.png" alt="" />
+    <img class="lanche" src="images/background1.png" />
+    <img class="lanche2" src="images/background1.png" />
+    <img class="cebola" src="images/cebola.png" />
+    <img class="alface2" src="images/alfacebg.png" />
+    <img class="lanche3" src="images/hamburguerbg.png" />
+
+    <script>
+      const verMaisBtn = document.getElementById("verMaisBtn");
+      verMaisBtn.addEventListener("click", function (e) {
+        e.preventDefault(); // impedir o redirecionamento imediato
+        document.body.classList.add("fade-out");
+
+        setTimeout(() => {
+          window.location.href = verMaisBtn.getAttribute("href");
+        }, 600); // espera a animação terminar
+      });
+    </script>
+  </body>
+</html>
