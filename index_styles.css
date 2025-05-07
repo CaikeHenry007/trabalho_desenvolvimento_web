@@ -3,7 +3,11 @@ body {
   padding: 100px;
 }
 
-.lanche{
+.background-images {
+  size: 100%;
+}
+
+#lanche{
   position: absolute;
   margin-left: -150px;
   top: 100px;
@@ -12,7 +16,7 @@ body {
   width: 300px;
 }
 
-.lanche2{
+#lanche2{
   position: absolute;
   right: 0px;
   top: 100px;
@@ -21,7 +25,7 @@ body {
   width: 300px;
 }
 
-.lanche3{
+#lanche3{
   position: absolute;
   left: 0px;
   bottom: 0px;
@@ -30,7 +34,7 @@ body {
 }
 
 
-.alface {
+#alface {
   position: absolute; 
   top: 0px; 
   left: 350px; 
@@ -38,7 +42,7 @@ body {
   height: 150px;
 }
 
-.alface2 {
+#alface2 {
   position: absolute; 
   bottom: 0px; 
   right: 200px; 
@@ -46,7 +50,7 @@ body {
   height: 150px;
 }
 
-.tomate{
+#tomate{
   position: absolute; 
   top: 0px; 
   right: 350px; 
@@ -54,7 +58,7 @@ body {
   height: 150px;
 }
 
-.cebola {
+#cebola {
   position: absolute; 
   bottom: 0px; 
   right: 0px; 
