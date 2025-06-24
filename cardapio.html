@@ -55,7 +55,7 @@
         </section>
     </div>
     <div class="back-button-container">
-        <a href="index.html" class="back-button" id="voltarBtn" >Voltar para a Tela Inicial</a>
+        <a class="back-button" id="voltarBtn" >Voltar para a Tela Inicial</a>
     </div>
 
     <div class="decoracoes">
@@ -70,15 +70,40 @@
         <img src="images/lula.png" class="lulas" id="lula4">
     </div>
   
+    <div class="bubbles">
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+      </div>
+
     <script>
         const verMaisBtn = document.getElementById("voltarBtn");
         voltarBtn.addEventListener("click", function (e) {
           e.preventDefault(); // impedir o redirecionamento imediato
           document.body.classList.add("fade-out");
   
+          
+        // Animação das bolhas
+        const bubbles = document.querySelectorAll(".bubble");
+        bubbles.forEach((bubble, i) => {
+          const size = 80 + Math.random() * 100;
+          bubble.style.width = `${size}px`;
+          bubble.style.height = `${size}px`;
+          bubble.style.left = `${Math.random() * 100}%`;
+          bubble.style.animation = `rise 2s ease-in forwards`;
+          bubble.style.animationDelay = `${i * 0.1}s`;
+  });
+
           setTimeout(() => {
-            window.location.href = voltarBtn.getAttribute("href");
-          }, 500); // espera a animação terminar
+            window.location.href = "index.html";
+          }, 1500); // espera a animação terminar
         });
       </script>
   </body>

@@ -12,17 +12,15 @@
     <link rel="stylesheet" href="index_styles.css" />
   </head>
   <body class="fade-in">
-    <div class="background-images"> 
-
-    <img id="alface" src="images/alface.png" />
-    <img id="tomate" src="images/tomate.png" alt="" />
-    <img id="lanche" src="images/background1.png" />
-    <img id="lanche2" src="images/background1.png" />
-    <img id="cebola" src="images/cebola.png" />
-    <img id="alface2" src="images/alfacebg.png" />
-    <img id="lanche3" src="images/hamburguerbg.png" />
-
-   </div>
+    <div class="background-images">
+      <img id="alface" src="images/alface.png" />
+      <img id="tomate" src="images/tomate.png" alt="" />
+      <img id="lanche" src="images/background1.png" />
+      <img id="lanche2" src="images/background1.png" />
+      <img id="cebola" src="images/cebola.png" />
+      <img id="alface2" src="images/alfacebg.png" />
+      <img id="lanche3" src="images/hamburguerbg.png" />
+    </div>
 
     <div class="card">
       <img src="images/logo.png" class="logo" alt="Logo" />
@@ -36,7 +34,7 @@
           muito bom humor em um ambiente temático único. Aqui, o sabor é
           profundo e a diversão é garantida!
         </p>
-        <a href="cardapio.html" id="verMaisBtn"><button>Ver Mais</button></a>
+        <button id="verMaisBtn">Ver Mais</button>
       </div>
 
       <div class="image-content">
@@ -46,15 +44,39 @@
       <img src="images/spongebob.png" class="spongebob" alt="Bob Esponja" />
     </div>
 
+    <div class="bubbles">
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+    </div>
+
     <script>
       const verMaisBtn = document.getElementById("verMaisBtn");
       verMaisBtn.addEventListener("click", function (e) {
         e.preventDefault(); // impedir o redirecionamento imediato
         document.body.classList.add("fade-out");
 
+        // Animação das bolhas
+        const bubbles = document.querySelectorAll(".bubble");
+        bubbles.forEach((bubble, i) => {
+          const size = 80 + Math.random() * 100;
+          bubble.style.width = `${size}px`;
+          bubble.style.height = `${size}px`;
+          bubble.style.left = `${Math.random() * 100}%`;
+          bubble.style.animation = `rise 2s ease-in forwards`;
+          bubble.style.animationDelay = `${i * 0.1}s`;
+        });
+
         setTimeout(() => {
-          window.location.href = verMaisBtn.getAttribute("href");
-        }, 500); // espera a animação terminar
+          window.location.href = "cardapio.html";
+        }, 1500); // espera a animação terminar
       });
     </script>
   </body>
