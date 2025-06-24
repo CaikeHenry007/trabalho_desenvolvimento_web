@@ -19,6 +19,7 @@ body {
   margin: 1rem auto;
   width: 90%;
   max-width: 900px;
+  z-index: 2;
 }
 
 .card .text {
@@ -98,66 +99,58 @@ body {
 
 .personagens {
   position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   pointer-events: none;
-  z-index: 1;
 }
 
 .personagem {
   position: absolute;
   max-width: 180px;
-  z-index: 1;
+  z-index: 3;
   height: auto;
 }
 
 #patrick {
   top: 25%;
-  right: 15%;
-  width: 180px;
+  right: 0;
 }
 
 #bob {
-  top: 14.4%;
-  right: 39%;
-  width: 180px;
+  top: 1%;
+  left: 2%;
 }
 
 #garry {
-  top: 20.8%;
-  left: 59%;
-  width: 140px;
+  top: 55%;
+  left: 50%;
 }
 
 #lula {
-  top: 62%;
-  left: 50%;
-  width: 180px;
+  top: 50%;
+  right: 5%;
 }
 
 #sandy {
-  bottom: 0;
-  left: 13%;
-  width: 180px;
+  bottom: 10%;
+  left: 5%;
 }
 
 #plankton {
-  top: 18%;
-  left: 9%;
+  top: 5%;
+  right: 0;
 }
 
 #sirigueijo {
   bottom: 0;
-  right: 20%;
-  width: 180px;
+  right: 5%;
 }
 
 #lula1 {
   width: 100px;
   top: 25%;
   left: 35%;
+  opacity: 0.3; /* opcional: deixa mais transparente */
 }
 
 .decoracoes {
@@ -173,7 +166,8 @@ body {
 .canto {
   position: absolute;
   width: 300px;
-  z-index: 1;
+  opacity: 0.5;
+  z-index: 0;
 }
 
 #planta-topo-esquerda {
@@ -214,6 +208,7 @@ body {
   height: auto;
   z-index: -1;
   pointer-events: none;
+  opacity: 0.5;
 }
 
 #lula2 {
@@ -228,9 +223,10 @@ body {
 
 #lula4 {
   top: 70%;
-  right: 10%;
+  right: 0%;
 }
 
+/* Animações */
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
@@ -248,4 +244,27 @@ body {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.card {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+.card .text p {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+.card:hover .text p {
+  max-height: 300px; /* altura suficiente para o texto caber */
+  opacity: 1;
 }
