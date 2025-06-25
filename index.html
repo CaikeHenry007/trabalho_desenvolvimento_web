@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
+    <script src="index.js"></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       href="https://fonts.googleapis.com/css2?family=Coiny&display=swap"
-      rel="stylesheet"
-    />
+      rel="stylesheet"/>
     <title>Tela de Início</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="index_styles.css" />
@@ -26,6 +26,20 @@
       <img src="images/logo.png" class="logo" alt="Logo" />
 
       <div class="text-content">
+        <div class="carousel">
+          <button class="prev" onclick="mudarSlide(-1)">❮</button>
+  
+          <img class="slide" src="images/imagemrestaurante1.png">
+          <img class="slide" src="images/imagemrestaurante2.png">
+          <img class="slide" src="images/imagemrestaurante3.png">
+  
+          <button class="next" onclick="mudarSlide(1)">❯</button>
+        </div>
+        <button id="verMaisBtn">Ver Mais</button>
+      </div>
+      
+
+      <div class="text-content">
         <h1>Frescos do mar</h1>
         <h2>Um cardápio tão bom que até o Plankton quer copiar!</h2>
         <p>
@@ -34,11 +48,6 @@
           muito bom humor em um ambiente temático único. Aqui, o sabor é
           profundo e a diversão é garantida!
         </p>
-        <button id="verMaisBtn">Ver Mais</button>
-      </div>
-
-      <div class="image-content">
-        <img src="images/hamburguerbob.png" class="" alt="Hamburguer" />
       </div>
 
       <img src="images/spongebob.png" class="spongebob" alt="Bob Esponja" />
