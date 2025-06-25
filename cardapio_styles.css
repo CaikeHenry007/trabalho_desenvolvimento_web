@@ -50,7 +50,7 @@ body {
   height: 200px;
   background-size: cover;
   background-position: center;
-  border-radius: 10px; /* Adicionando um pequeno arredondamento nas imagens */
+  border-radius: 10px;
 }
 
 .personagem-card {
@@ -61,7 +61,6 @@ body {
   pointer-events: none;
 }
 
-/* Background colors */
 .lilac {
   background-color: #dda6f2;
 }
@@ -124,7 +123,7 @@ body {
   width: 100px;
   position: absolute;
   top: 10px;
-  left: 55%; /* posicionado um pouco ao lado do Garry */
+  left: 55%;
   transform: translateX(-50%) translateY(30px);
   opacity: 0;
   transition: transform 0.4s ease, opacity 0.4s ease;
